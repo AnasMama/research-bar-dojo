@@ -1,7 +1,21 @@
 .App {
-  text-align: center;
-}
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
 
+ 
+}
+ul {
+  /* list-style: none; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 20rem;
+  gap: 2rem;
+ }
 .App-logo {
   height: 40vmin;
   pointer-events: none;

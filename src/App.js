@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import fruits from "./fruits";
+import "./App.css";
 
 function App() {
+  const [query, setQuery] = useState("")
+  const listFiltered = fruits.filter(e=>e.includes(query))
+  
+  const handleQuery = (event) => {
+    setQuery(event.target.value)
+  }
+  console.log(query)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <label htmlFor="research">Recherche :
+        <input type="text" id="research" value={query} onChange={handleQuery} />
+      </label>
+      <ul>
+        {listFiltered.map(e=>(
+          <li>{e}</li>
+        ))}
+      </ul>
     </div>
   );
 }
