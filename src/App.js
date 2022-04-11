@@ -1,25 +1,14 @@
-import { useState } from "react";
-import fruits from "./fruits";
 import "./App.css";
+// Importer ma liste complète de fruits
 
 function App() {
-  const [query, setQuery] = useState("")
-  const listFiltered = fruits.filter(e=>e.includes(query))
-  
-  const handleQuery = (event) => {
-    setQuery(event.target.value)
-  }
-  console.log(query)
-
   return (
     <div className="App">
       <label htmlFor="research">Recherche :
-        <input type="text" id="research" value={query} onChange={handleQuery} />
+        <input type="text" id="research"/>
       </label>
       <ul>
-        {listFiltered.map(e=>(
-          <li>{e}</li>
-        ))}
+        {/* Afficher ma liste de fruit ici */}
       </ul>
     </div>
   );

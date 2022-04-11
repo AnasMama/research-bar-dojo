@@ -1,3 +1,21 @@
+## Practice
+
+# Etape 1 : 
+
+Récupérer la valeur de mon champs de saisie à chaque changement.
+
+# Etape 2 : 
+
+Afficher ma liste de fruit.
+
+# Etape 3 : 
+
+Filtrer la liste de fruits en fonction de la valeur de mon champs de saisie.
+
+
+
+## Setup
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
